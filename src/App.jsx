@@ -1,11 +1,12 @@
-import { Header } from "./components/index";
+import { Header, Footer } from "./components/index"
 
 function App() {
-  return (
-    <>
-      <Header />
-    </>
-  );
+	return (
+		<>
+			<Header />
+			<Footer />
+		</>
+	)
 }
 
-export default App;
+export default App
