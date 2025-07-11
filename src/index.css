@@ -1,0 +1,65 @@
+:root {
+  background-color: darkseagreen;
+  font-size: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1200px;
+  min-height: 100vh;
+  background-color: darkorchid;
+  margin: auto;
+}
+
+.layout-container {
+  border: red 1px solid;
+  min-height: 100vh;
+  justify-items: center;
+  align-items: center;
+  display: grid;
+  grid-template-rows: 2fr 3fr 1fr 4fr 3fr 1fr;
+  grid-template-areas:
+    "header"
+    "game-info"
+    "action-button"
+    "display"
+    "answer-area"
+    "footer";
+}
+
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.action-button {
+  grid-area: action-button;
+}
+
+.display {
+  grid-area: display;
+  border: red 1px solid;
+  width: 50%;
+  height: 100%;
+}
+
+.answer-area {
+  grid-area: answer-area;
+}
+
+.game-info {
+  grid-area: game-info;
+}

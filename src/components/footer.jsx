@@ -1,10 +1,11 @@
 function Footer() {
   return (
-    <>
-      <p> &#x00A9;2025 Georgie and Kieron</p>
-      <p><a href="https://georgiex.co.uk"></a>georgiex.co.uk</p>
-    </>
+    <footer>
+      <p>
+        &#x00A9;2025 Georgie and Kieron <a href="https://georgiex.co.uk">georgiex.co.uk</a>
+        </p>
+    </footer>
   );
 }
 
-export default Footer
+export default Footer;

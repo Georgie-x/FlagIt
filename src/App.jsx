@@ -1,14 +1,17 @@
-import { Header, Footer, Instructions, ActionButton } from "./components/index"
+import { Header, Footer, Instructions, ActionButton, Display } from "./components/index";
 
 function App() {
-	return (
-		<>
-			<Header />
-			<Instructions />
-			<ActionButton />
-			<Footer />
-		</>
-	)
+  return (
+    <>
+      <div className="layout-container">
+        <Header />
+        <Instructions />
+        <ActionButton />
+        <Display />
+        <Footer />
+      </div>
+    </>
+  );
 }
 
-export default App
+export default App;
