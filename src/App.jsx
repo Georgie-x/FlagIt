@@ -1,9 +1,11 @@
-import { Header, Footer } from "./components/index"
+import { Header, Footer, Instructions, ActionButton } from "./components/index"
 
 function App() {
 	return (
 		<>
 			<Header />
+			<Instructions />
+			<ActionButton />
 			<Footer />
 		</>
 	)
