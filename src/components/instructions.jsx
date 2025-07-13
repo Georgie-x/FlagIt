@@ -1,12 +1,9 @@
-
-
 function Instructions() {
-	return (
-		<>
-			<h2>Welcome to FlagIt, a flag guessing game</h2>
-			<p>instructions....</p>
-		</>
-	)
+  return (
+    <>
+      <p>Can you guess all flags correctly? You'll be given 10 random flags of the world and have to guess the country it belongs to. There will be 4 options to choose from, good luck.</p>
+    </>
+  );
 }
 
-export default Instructions
+export default Instructions;

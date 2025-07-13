@@ -1,9 +1,11 @@
-function answerArea() {
+import Instructions from "./instructions";
+
+function AnswerArea() {
   return (
     <div className="answer-area">
-      <p>we'll be answers</p>
+      <Instructions />
     </div>
   );
 }
 
-export default answerArea
+export default AnswerArea

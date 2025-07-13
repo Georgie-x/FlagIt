@@ -1,5 +1,5 @@
 function FlagArea() {
-  return <p>hi</p>;
+  return <p>flagpic</p>;
 }
 
 export default FlagArea;

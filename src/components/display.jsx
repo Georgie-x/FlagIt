@@ -1,10 +1,10 @@
-import Instructions from "./instructions";
+import Decor from "./decor";
 import FlagArea from "./flagArea";
 
 function Display() {
   return (
     <div className="display">
-      <Instructions />
+      <Decor />
       <FlagArea />
     </div>
   );

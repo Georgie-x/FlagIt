@@ -1,13 +1,21 @@
-import { Header, Footer, Instructions, ActionButton, Display } from "./components/index";
+import {
+  Header,
+  Footer,
+  InfoArea,
+  ActionButton,
+  Display,
+  AnswerArea,
+} from "./components/index";
 
 function App() {
   return (
     <>
       <div className="layout-container">
         <Header />
-        <Instructions />
-        <ActionButton />
         <Display />
+        <InfoArea />
+        <ActionButton />
+        <AnswerArea />
         <Footer />
       </div>
     </>
