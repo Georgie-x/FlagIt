@@ -1,7 +1,11 @@
-function InfoArea() {
+import { gameStageInfo } from "../utilities";
+
+function InfoArea({ gameStage, Score }) {
+  const infoText = gameStageInfo[gameStage];
+
   return (
     <>
-      <p>Some info</p>
+      <p>{infoText}</p>
     </>
   );
 }

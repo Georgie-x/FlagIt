@@ -1,5 +1,5 @@
-const gameStageMap = {
-	0: "START",
+const gameStageInfo = {
+	0: "Ready?",
 	1: "Q1",
 	2: "Q2",
 	3: "Q3",
@@ -10,7 +10,7 @@ const gameStageMap = {
 	8: "Q8",
 	9: "Q9",
 	10: "Q10",
-	11: "END",
+	11: "Game Over",
 }
 
-export { gameStageMap }
+export { gameStageInfo }
