@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Display from "./display";
+import FlagArea from "./flagArea";
 import InfoArea from "./infoArea";
 import ActionButton from "./actionButton";
 import AnswerArea from "./answerArea";
@@ -11,19 +11,19 @@ function GameControl() {
 
   return (
     <main>
-      <Display gameStage={gameStage} country={country} />
+      <FlagArea gameStage={gameStage} country={country} />
+      <AnswerArea
+        gameStage={gameStage}
+        setGameStage={setGameStage}
+        setScore={setScore}
+        setCountry={setCountry}
+      />
       <InfoArea gameStage={gameStage} score={score} />
       <ActionButton
         gameStage={gameStage}
         setGameStage={setGameStage}
         setCountry={setCountry}
         setScore={setScore}
-      />
-      <AnswerArea
-        gameStage={gameStage}
-        setGameStage={setGameStage}
-        setScore={setScore}
-        setCountry={setCountry}
       />
     </main>
   );

@@ -36,7 +36,7 @@ main {
   grid-template-columns: 4fr 1fr;
   grid-template-areas:
     "header header"
-    "display display"
+    "flag-area flag-area"
     "info-area action-button"
     "answer-area answer-area"
     "footer footer";
@@ -68,9 +68,8 @@ footer {
   grid-area: action-button;
 }
 
-.display {
-  grid-area: display;
-  border: red 1px solid;
+.flag-area {
+  grid-area: flag-area;
   width: 50%;
   height: 75%;
 }
@@ -88,4 +87,9 @@ button {
   height: 50px;
   width: 150px;
   font-size: 32px;
+}
+
+img {
+  max-height: 600px;
+  max-width: 800px;
 }

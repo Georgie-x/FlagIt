@@ -1,7 +1,7 @@
 function Decor() {
   return (
     <div className="decor">
-      <p>Decor</p>
+      <img src="src\assets\world-flags.jpg" />
     </div>
   );
 }
