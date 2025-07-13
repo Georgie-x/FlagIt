@@ -1,25 +1,19 @@
 import {
-  Header,
-  Footer,
-  InfoArea,
-  ActionButton,
-  Display,
-  AnswerArea,
-} from "./components/index";
+	Header,
+	Footer,
+	GameControl,
+} from "./components/index"
 
 function App() {
-  return (
-    <>
-      <div className="layout-container">
-        <Header />
-        <Display />
-        <InfoArea />
-        <ActionButton />
-        <AnswerArea />
-        <Footer />
-      </div>
-    </>
-  );
+	return (
+		<>
+			<div className='layout-container'>
+				<Header />
+				<GameControl />
+				<Footer />
+			</div>
+		</>
+	)
 }
 
-export default App;
+export default App
