@@ -1,95 +1,99 @@
 :root {
-  background-color: darkseagreen;
-  font-size: 32px;
+	background-color: darkseagreen;
+	font-size: 16px;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  max-width: 100vw;
-  margin: auto;
+	max-width: 100vw;
+	margin: auto;
 }
 
-main {
-  margin: auto;
-  width: 100%;
-  height: 100%;
-}
 .layout-container {
-  height: 100vh;
-  max-height: 100vh;
-  width: 100%;
-  margin: auto;
-  justify-items: center;
-  align-items: center;
-  display: grid;
-  grid-template-rows: 2fr 10fr 2fr 10fr 1fr;
-  grid-template-columns: 4fr 1fr;
-  grid-template-areas:
-    "header header"
-    "flag-area flag-area"
-    "info-area action-button"
-    "answer-area answer-area"
-    "footer footer";
-  gap: 0px;
-  border: red 1px solid;
+	height: 100vh;
+	max-height: 100vh;
+	width: 100%;
+	margin: auto;
+	display: grid;
+	grid-template-rows: 3fr 20fr 2fr;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+	gap: 0px;
+}
+main {
+	grid-area: main;
+	display: grid;
+	grid-template-rows: 4fr 4fr 1fr;
+	grid-template-columns: 4fr 1fr;
+	grid-template-areas:
+		"flag-area flag-area"
+		"answer-area answer-area"
+    "info-area action-button";
+	margin: auto;
+	width: 100%;
+	height: 100%;
+  max-width: 320px;
 }
 
 h1,
 h2 {
-  text-align: center;
+	text-align: center;
 }
 
 header,
 footer {
-  background-color: bisque;
-  width: 100%;
-  text-align: center;
+	background-color: bisque;
+	width: 100%;
+	text-align: center;
+  display: grid;
+  place-items: center;
 }
 
 header {
-  grid-area: header;
+	grid-area: header;
 }
 
 footer {
-  grid-area: footer;
+	grid-area: footer;
 }
 
 .action-button {
-  grid-area: action-button;
+	grid-area: action-button;
 }
 
 .flag-area {
-  grid-area: flag-area;
-  width: 50%;
-  height: 75%;
+	grid-area: flag-area;
+
 }
 
 .answer-area {
-  grid-area: answer-area;
-  width: 50%;
+	grid-area: answer-area;
+
 }
 
 .info-area {
-  grid-area: info-area;
+	grid-area: info-area;
 }
 
 button {
-  height: 50px;
-  width: 150px;
-  font-size: 32px;
+	height: 50px;
+	width: 150px;
+	font-size: 22px;
 }
 
 img {
-  max-height: 600px;
-  max-width: 800px;
+	max-height: 200px;
+	max-width: 320px;
 }
