@@ -1,11 +1,21 @@
-import Instructions from "./instructions";
+import { Instructions, AnswerButtons, Results } from "./index";
 
-function AnswerArea() {
+function AnswerArea({ gameStage, score, country, wrongCountries }) {
   return (
     <div className="answer-area">
-      <Instructions />
+      {gameStage === 0 ? (
+        <Instructions />
+      ) : gameStage === 11 ? (
+        <Results score={score} />
+      ) : (
+        <AnswerButtons
+          country={country.name}
+          wrongCountries={wrongCountries}
+          gameStage={gameStage}
+        />
+      )}
     </div>
   );
 }
 
-export default AnswerArea
+export default AnswerArea;

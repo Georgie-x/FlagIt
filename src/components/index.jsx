@@ -7,5 +7,7 @@ import InfoArea from "./infoArea";
 import AnswerArea from "./answerArea";
 import Decor from "./decor";
 import GameControl from "./gameControl";
+import AnswerButtons from "./answerButtons";
+import Results from "./results";
 
-export { Header, Footer, Instructions, ActionButton, FlagArea, InfoArea, AnswerArea, Decor, GameControl };
+export { Header, Footer, Instructions, ActionButton, FlagArea, InfoArea, AnswerArea, Decor, GameControl, AnswerButtons, Results };
