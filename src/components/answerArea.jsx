@@ -1,6 +1,10 @@
 import { Instructions, AnswerButtons, Results } from "./index";
+  
 
-function AnswerArea({ gameStage, score, country, wrongCountries }) {
+function AnswerArea({ gameStage, score, setScore, country, wrongCountries, setGameStage }) {
+console.log('yoyo', score)
+
+
   return (
     <div className="answer-area">
       {gameStage === 0 ? (
@@ -12,6 +16,8 @@ function AnswerArea({ gameStage, score, country, wrongCountries }) {
           country={country.name}
           wrongCountries={wrongCountries}
           gameStage={gameStage}
+          setGameStage={setGameStage}
+          setScore={setScore}
         />
       )}
     </div>

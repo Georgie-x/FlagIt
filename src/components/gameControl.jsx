@@ -7,7 +7,7 @@ import flagData from "../database";
 
 function GameControl() {
   const [gameStage, setGameStage] = useState(0);
-  const [country, setCountry] = useState({});
+  const [country, setCountry] = useState("");
   const [score, setScore] = useState(0);
   const [wrongCountries, setWrongCountries] = useState([]);
 
@@ -19,7 +19,7 @@ function GameControl() {
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
 
-      setCountry(shuffled[0]);
+      setCountry(shuffled[0].name);
       setWrongCountries(shuffled.slice(1, 4).map(country => country.name));
     }
   }, [gameStage]);
@@ -30,11 +30,10 @@ function GameControl() {
       <AnswerArea
         gameStage={gameStage}
         setGameStage={setGameStage}
-        setScore={setScore}
-        setCountry={setCountry}
+        setScore={setScore} 
         wrongCountries={wrongCountries}
-		score={score}
 		country={country}
+		score={score}
       />
       <InfoArea gameStage={gameStage} score={score} />
       <ActionButton
