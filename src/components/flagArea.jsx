@@ -4,7 +4,7 @@ function FlagArea({ gameStage, country }) {
   
   const flag = flagData.find((item) => item.name === country);
 
-  console.log( 'a', gameStage, 'b', country, 'c', flag)
+console.log('flagdata', gameStage, country, flag)
 
   return (
     <div className="flag-area">

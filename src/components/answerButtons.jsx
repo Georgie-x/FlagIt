@@ -16,6 +16,7 @@ function AnswerButtons({ country, wrongCountries, gameStage, setGameStage, setSc
 			.map(({ answer }) => answer)
 
 		setShuffledAnswers(shuffled)
+    console.log('answerbut', gameStage, country, allAnswers, shuffled)
 	}
 
 	function handleButtonClick(selectedAnswer) {
@@ -25,6 +26,7 @@ function AnswerButtons({ country, wrongCountries, gameStage, setGameStage, setSc
 
 		setGameStage((prev) => prev + 1)
 	}
+
 
 	return (
 		<div className='answer-buttons'>

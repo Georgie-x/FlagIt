@@ -20,7 +20,7 @@ function GameControl() {
       }
 
       setCountry(shuffled[0].name);
-      setWrongCountries(shuffled.slice(1, 4).map(country => country.name));
+      setWrongCountries(shuffled.slice(1, 4).map((country) => country.name));
     }
   }, [gameStage]);
 
@@ -30,16 +30,15 @@ function GameControl() {
       <AnswerArea
         gameStage={gameStage}
         setGameStage={setGameStage}
-        setScore={setScore} 
+        setScore={setScore}
         wrongCountries={wrongCountries}
-		country={country}
-		score={score}
+        country={country}
+        score={score}
       />
       <InfoArea gameStage={gameStage} score={score} />
       <ActionButton
         gameStage={gameStage}
         setGameStage={setGameStage}
-        setCountry={setCountry}
         setScore={setScore}
       />
     </main>

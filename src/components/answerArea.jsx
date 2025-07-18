@@ -2,7 +2,7 @@ import { Instructions, AnswerButtons, Results } from "./index";
   
 
 function AnswerArea({ gameStage, score, setScore, country, wrongCountries, setGameStage }) {
-console.log('yoyo', score)
+
 
 
   return (
@@ -13,7 +13,7 @@ console.log('yoyo', score)
         <Results score={score} />
       ) : (
         <AnswerButtons
-          country={country.name}
+          country={country}
           wrongCountries={wrongCountries}
           gameStage={gameStage}
           setGameStage={setGameStage}
