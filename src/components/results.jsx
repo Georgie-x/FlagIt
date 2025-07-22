@@ -4,7 +4,7 @@ function Results({ score }) {
   return (
     <div className="results">
       <h3>You scored {score}!</h3>
-      <p>{messageEnd(score)}</p>
+      <p>{endMessage(score)}</p>
     </div>
   );
 }
