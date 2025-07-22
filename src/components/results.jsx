@@ -1,6 +1,4 @@
-function Results({score}) {
-
-
+function Results({ score }) {
   return (
     <div className="results">
       <p>You scored {score}</p>
@@ -8,4 +6,4 @@ function Results({score}) {
   );
 }
 
-export default Results
+export default Results;

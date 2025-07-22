@@ -10,6 +10,7 @@ function GameControl() {
   const [country, setCountry] = useState("");
   const [score, setScore] = useState(0);
   const [wrongCountries, setWrongCountries] = useState([]);
+  const [shuffledAnswers, setShuffledAnswers] = useState([]);
 
   useEffect(() => {
     if (gameStage >= 1 && gameStage <= 10) {
@@ -24,6 +25,18 @@ function GameControl() {
     }
   }, [gameStage]);
 
+  useEffect(() => {
+    if (!country || wrongCountries.length === 0) return;
+
+    const allAnswers = [...wrongCountries, country];
+    const shuffled = allAnswers
+      .map((answer) => ({ answer, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ answer }) => answer);
+
+    setShuffledAnswers(shuffled);
+  }, [country, wrongCountries]);
+
   return (
     <main>
       <FlagArea gameStage={gameStage} country={country} />
@@ -31,9 +44,9 @@ function GameControl() {
         gameStage={gameStage}
         setGameStage={setGameStage}
         setScore={setScore}
-        wrongCountries={wrongCountries}
         country={country}
         score={score}
+        shuffledAnswers={shuffledAnswers}
       />
       <InfoArea gameStage={gameStage} score={score} />
       <ActionButton

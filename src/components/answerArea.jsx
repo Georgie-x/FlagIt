@@ -1,10 +1,13 @@
 import { Instructions, AnswerButtons, Results } from "./index";
-  
 
-function AnswerArea({ gameStage, score, setScore, country, wrongCountries, setGameStage }) {
-
-
-
+function AnswerArea({
+  gameStage,
+  score,
+  setScore,
+  country,
+  shuffledAnswers,
+  setGameStage,
+}) {
   return (
     <div className="answer-area">
       {gameStage === 0 ? (
@@ -14,10 +17,10 @@ function AnswerArea({ gameStage, score, setScore, country, wrongCountries, setGa
       ) : (
         <AnswerButtons
           country={country}
-          wrongCountries={wrongCountries}
           gameStage={gameStage}
           setGameStage={setGameStage}
           setScore={setScore}
+          shuffledAnswers={shuffledAnswers}
         />
       )}
     </div>

@@ -2,7 +2,7 @@ function ActionButton({ gameStage, setGameStage, setScore }) {
   const buttonText =
     gameStage === 0 ? "START!" : gameStage === 11 ? "PLAY AGAIN?" : "SKIP";
 
-   const handleClick = () => {
+  const handleClick = () => {
     if (gameStage === 11) {
       setScore(0);
       setGameStage(0);

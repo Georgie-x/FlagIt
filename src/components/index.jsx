@@ -9,4 +9,15 @@ import GameControl from "./gameControl";
 import AnswerButtons from "./answerButtons";
 import Results from "./results";
 
-export { Header, Footer, Instructions, ActionButton, FlagArea, InfoArea, AnswerArea, GameControl, AnswerButtons, Results };
+export {
+  Header,
+  Footer,
+  Instructions,
+  ActionButton,
+  FlagArea,
+  InfoArea,
+  AnswerArea,
+  GameControl,
+  AnswerButtons,
+  Results,
+};
