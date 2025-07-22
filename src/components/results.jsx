@@ -1,7 +1,10 @@
+import { endMessage } from "../utilities";
+
 function Results({ score }) {
   return (
     <div className="results">
-      <p>You scored {score}</p>
+      <h3>You scored {score}!</h3>
+      <p>{messageEnd(score)}</p>
     </div>
   );
 }
