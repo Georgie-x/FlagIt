@@ -1,4 +1,7 @@
-function ActionButton({ gameStage, setGameStage, setScore }) {
+import { gameStageInfo } from "../utilities";
+
+function ActionButton({ gameStage, setGameStage, setScore}) {
+  const infoText = gameStageInfo[gameStage];
   const buttonText =
     gameStage === 0 ? "START!" : gameStage === 11 ? "PLAY AGAIN?" : "SKIP";
 
@@ -16,7 +19,10 @@ function ActionButton({ gameStage, setGameStage, setScore }) {
 
   return (
     <div className="action-button">
-      <button onClick={() => handleClick()}>{buttonText}</button>
+      <label htmlFor="aButton">{infoText}</label>
+      <button id="aButton" onClick={() => handleClick()}>
+        {buttonText}
+      </button>
     </div>
   );
 }
