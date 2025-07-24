@@ -14,7 +14,6 @@ function GameControl() {
   useEffect(() => {
     if (gameStage >= 1 && gameStage <= 10) {
       const shuffled = Object.keys(countryAlphaCodes);
-      console.log(shuffled);
       for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
@@ -36,6 +35,8 @@ function GameControl() {
 
     setShuffledAnswers(shuffled);
   }, [country, wrongCountries]);
+
+  console.log(country)
 
   return (
     <main>
