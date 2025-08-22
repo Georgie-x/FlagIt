@@ -1,62 +1,41 @@
-import { useEffect, useState } from "react";
-import FlagArea from "./flagArea";
-import ActionButton from "./actionButton";
-import AnswerArea from "./answerArea";
-import countryAlphaCodes from "../database";
+import { useEffect, useState } from "react"
+import FlagArea from "./flagArea"
+import ActionButton from "./actionButton"
+import AnswerArea from "./answerArea"
+import genQ from "../utility/qBuilder"
+import countryAlphaCodes from "../utility/database"
 
 function GameControl() {
-  const [gameStage, setGameStage] = useState(0);
-  const [country, setCountry] = useState("");
-  const [score, setScore] = useState(0);
-  const [wrongCountries, setWrongCountries] = useState([]);
-  const [shuffledAnswers, setShuffledAnswers] = useState([]);
+	const [gameStage, setGameStage] = useState("start")
+	const [score, setScore] = useState(0)
+	const [questions, setQuestions] = useState([])
+	const [questionNo, setQuestionNo] = useState(0)
 
-  useEffect(() => {
-    if (gameStage >= 1 && gameStage <= 10) {
-      const shuffled = Object.keys(countryAlphaCodes);
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-      }
+	useEffect(() => {
+		setQuestions(genQ(countryAlphaCodes))
+	}, [])
 
-      setCountry(shuffled[0]);
-      setWrongCountries(shuffled.slice(1, 4).map((country) => country));
-    }
-  }, [gameStage]);
+	const currentQuestion = questions[questionNo]
 
-  useEffect(() => {
-    if (!country || wrongCountries.length === 0) return;
-
-    const allAnswers = [...wrongCountries, country];
-    const shuffled = allAnswers
-      .map((answer) => ({ answer, sort: Math.random() }))
-      .sort((a, b) => a.sort - b.sort)
-      .map(({ answer }) => answer);
-
-    setShuffledAnswers(shuffled);
-  }, [country, wrongCountries]);
-
-  console.log(country)
-
-  return (
-    <main>
-      <FlagArea gameStage={gameStage} country={country} />
-      <AnswerArea
-        gameStage={gameStage}
-        setGameStage={setGameStage}
-        setScore={setScore}
-        country={country}
-        score={score}
-        shuffledAnswers={shuffledAnswers}
-      />
-
-      <ActionButton
-        gameStage={gameStage}
-        setGameStage={setGameStage}
-        setScore={setScore}
-      />
-    </main>
-  );
+	return (
+		<main>
+			<FlagArea gameStage={gameStage} currentQuestion={currentQuestion} />
+			<AnswerArea
+				gameStage={gameStage}
+				setGameStage={setGameStage}
+				setScore={setScore}
+				currentQuestion={currentQuestion}
+				score={score}
+			/>
+			<ActionButton
+				questionNo={questionNo}
+				setQuestionNo={setQuestionNo}
+				gameStage={gameStage}
+				setGameStage={setGameStage}
+				setScore={setScore}
+			/>
+		</main>
+	)
 }
 
-export default GameControl;
+export default GameControl

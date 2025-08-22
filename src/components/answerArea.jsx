@@ -1,30 +1,23 @@
-import { Instructions, AnswerButtons, Results } from "./index";
+import { Instructions, AnswerButtons, Results } from "./index"
 
-function AnswerArea({
-  gameStage,
-  score,
-  setScore,
-  country,
-  shuffledAnswers,
-  setGameStage,
-}) {
-  return (
-    <div className="answer-area">
-      {gameStage === 0 ? (
-        <Instructions />
-      ) : gameStage === 11 ? (
-        <Results score={score} />
-      ) : (
-        <AnswerButtons
-          country={country}
-          gameStage={gameStage}
-          setGameStage={setGameStage}
-          setScore={setScore}
-          shuffledAnswers={shuffledAnswers}
-        />
-      )}
-    </div>
-  );
+function AnswerArea({ currentQuestion, questionNo, gameStage, score, setScore, setGameStage }) {
+	return (
+		<div className='answer-area'>
+			{gameStage === "start" ? (
+				<Instructions />
+			) : gameStage === "end" ? (
+				<Results score={score} />
+			) : (
+				<AnswerButtons
+					gameStage={gameStage}
+					setGameStage={setGameStage}
+					setScore={setScore}
+					currentQuestion={currentQuestion}
+          questionNo={questionNo}
+				/>
+			)}
+		</div>
+	)
 }
 
-export default AnswerArea;
+export default AnswerArea

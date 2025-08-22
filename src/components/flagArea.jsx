@@ -1,25 +1,28 @@
-import countryAlphaCodes from "../database"
-import worldFlags from "../assets/worldFlags.jpg"
+import worldFlags from "../assets/worldFlags.jpg";
 
-function FlagArea({ gameStage, country }) {
-	const flag = countryAlphaCodes[country]
+function FlagArea({ gameStage, currentQuestion }) {
+  if (!currentQuestion) {
+    return (
+      <div className='flag-area'>
+        <img src={worldFlags} alt='World Flags' />
+      </div>
+    );
+  }
 
-	console.log(flag)
+  const flagCode = currentQuestion.correctCountry;
 
-	return (
-		<div className='flag-area'>
-			{gameStage === 0 || gameStage === 11 ? (
-				<img src={worldFlags} alt='World Flags' />
-			) : flag ? (
-				<img
-					src={`https://flagcdn.com/w320/${flag}.png
-`}
-				/>
-			) : (
-				<p>Flag not found</p>
-			)}
-		</div>
-	)
+  return (
+    <div className='flag-area'>
+      {gameStage !== 'playing' ? (
+        <img src={worldFlags} alt='World Flags' />
+      ) : (
+        <img
+          src={`https://flagcdn.com/w320/${flagCode}.png`}
+          alt={`Flag`}
+        />
+      )}
+    </div>
+  );
 }
 
-export default FlagArea
+export default FlagArea;
