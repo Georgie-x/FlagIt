@@ -28,7 +28,7 @@ body {
 		"header"
 		"main"
 		"footer";
-	gap: 0px;
+	gap: 10px;
 }
 main {
 	grid-area: main;
@@ -94,7 +94,7 @@ footer {
 
 .flag-area {
 	grid-area: flag-area;
-	height: 40vh;
+	height: 20vh;
 	display: flex;
 	align-items: center;
 }
