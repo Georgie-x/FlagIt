@@ -1,10 +1,10 @@
-import { endMessage } from "../utilities";
+import { endMessage } from "../utility/gameMessages";
 
-function Results({ score }) {
+function Results({ score, gameMode }) {
   return (
     <div className="results">
       <h3>You scored {score}!</h3>
-      <p>{endMessage(score)}</p>
+      <p>{endMessage(score, gameMode)}</p>
     </div>
   );
 }
