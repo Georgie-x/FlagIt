@@ -1,5 +1,3 @@
-import React from "react"
-
 function ActionButton({
 	questionNo,
 	setQuestionNo,
@@ -36,15 +34,7 @@ function ActionButton({
 
 	return (
 		<div className='action-button'>
-			{gameStage === "playing" && <label htmlFor='aButton'>Question {questionNo + 1}</label>}
-
-			{showButton && (
-				<button id='aButton' onClick={() => handleClick()}>
-					{buttonText}
-				</button>
-			)}
-
-			{gameStage === "start" && (
+			{gameStage === "start" ? (
 				<fieldset>
 					<div>
 						<input
@@ -69,6 +59,16 @@ function ActionButton({
 						<label htmlFor='survival'>Hardcore</label>
 					</div>
 				</fieldset>
+			) : gameStage === "playing" ? (
+				<label htmlFor='aButton'>Question {questionNo + 1}</label>
+			) : (
+				<label htmlFor='aButton'></label>
+			)}
+
+			{showButton && (
+				<button id='aButton' onClick={() => handleClick()}>
+					{buttonText}
+				</button>
 			)}
 		</div>
 	)

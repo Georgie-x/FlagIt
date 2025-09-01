@@ -4,6 +4,7 @@ function Results({ score, gameMode }) {
   return (
     <div className="results">
       <h3>You scored {score}!</h3>
+      <br/>
       <p>{endMessage(score, gameMode)}</p>
     </div>
   );
