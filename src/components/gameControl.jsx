@@ -42,7 +42,7 @@ function GameControl() {
         currentQuestion={currentQuestion}
         score={score}
         setQuestionNo={setQuestionNo}
-		gameMode={gameMode}
+        gameMode={gameMode}
       />
       <ActionButton
         questionNo={questionNo}
