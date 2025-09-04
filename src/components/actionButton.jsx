@@ -1,3 +1,6 @@
+import HighscoreButton from "./highscoreButton"
+
+
 function ActionButton({
 	questionNo,
 	setQuestionNo,
@@ -70,6 +73,7 @@ function ActionButton({
 					{buttonText}
 				</button>
 			)}
+			<HighscoreButton />
 		</div>
 	)
 }
