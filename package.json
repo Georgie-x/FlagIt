@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
-	"homepage": "https://its.georgie.co.uk",
+	"homepage": "https://flagit.georgie.co.uk",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
