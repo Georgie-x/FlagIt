@@ -8,7 +8,7 @@
 
 :root {
 	--primary-light: rgb(83, 167, 219);
-	--primary-dark: hsl(246, 77%, 43%);
+	--primary-dark: hsl(221, 65%, 42%);
 	--text: white;
 	--highlight: rgb(22, 240, 51);
 	--unhilighted: rgb(204, 248, 204);
