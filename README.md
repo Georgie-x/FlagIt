@@ -14,9 +14,9 @@ Original Plan
 // show green for correct answer, red for wrong (CSS)
 
 // potentially avoid double clicking by accident (errors)
-
+ 
 
 
 Update
 
-We used flagCDN.com for the API after trying a few others which would miss or have errors with certain flags. Rewrote game logic to generate all the questions at the start which helped to avoid repeat questions throughout the game. Added a second game mode to test all countries in a survival format. Potential future task of including a highscore (using firebase).
+We used flagCDN.com for the API after trying a few others which would miss or have errors with certain flags. Rewrote game logic to generate all the questions at the start which helped to avoid repeat questions throughout the game. Added a second game mode to test all countries in a survival format. Potential future task of including a highscore (using firebase). 
