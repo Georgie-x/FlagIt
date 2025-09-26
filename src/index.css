@@ -13,7 +13,6 @@
 	--highlight: rgb(22, 240, 51);
 	--unhilighted: rgb(204, 248, 204);
 	--wrong: hsl(0, 100%, 50%, 0.4);
-	--main: hsl(246, 77%, 43%, 0.8);
 	--layout-border: 3px var(--text) double;
 	--button-border: 2px var(--text) solid;
 	--button-border-wrong: 2px var(--wrong) solid;
@@ -60,7 +59,7 @@ main {
 
 @media (min-width: 720px) {
 	main {
-		background-color: var(--main);
+		background-color: var(--primary-dark);
 		border: var(--layout-border);
 		max-width: 720px;
 		min-height: 700px;
