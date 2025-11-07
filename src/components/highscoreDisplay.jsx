@@ -37,7 +37,7 @@ function HighscoreDisplay({ isOpen }) {
 				{scores.map((entry) => (
 					<li key={entry.position} style={{ marginBottom: "8px" }}>
 						#{entry.position} {entry.name} — {entry.score} pts (
-						{new Date(entry.time).toLocaleDateString()})
+						{new Date(entry.time).toLocaleDateString('en-GB')})
 					</li>
 				))}
 			</ul>
