@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:9090/api/highscores'
+const API_URL = 'http://72.61.19.16:3000/api/highscores';
+
 
 export const getHighscores = async () => {
   const response = await fetch(API_URL)
