@@ -1,4 +1,5 @@
-const API_URL = 'http://72.61.19.16:3000/api/highscores';
+const API_URL = 'https://georgiex.cloud/api/highscores';
+
 
 
 export const getHighscores = async () => {
