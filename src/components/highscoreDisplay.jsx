@@ -33,6 +33,7 @@ function HighscoreDisplay({ isOpen }) {
 	return (
 		<div className='highscore-display'>
 			<h2>Highscores</h2>
+			<br/>
 			<ul>
 				{scores.map((entry) => (
 					<li key={entry.position} style={{ marginBottom: "8px" }}>

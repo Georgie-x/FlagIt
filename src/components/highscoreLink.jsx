@@ -1,14 +1,14 @@
 import { useState } from "react"
 import HighscoreDisplay from "./highscoreDisplay"
 
-function HighscoreButton() {
+function HighscoreLink() {
 	const [isOpen, setIsOpen] = useState(false)
 
 	return (
 		<div className='action-button-area'>
-			<button onClick={() => setIsOpen(!isOpen)} className='open-btn'>
-				{isOpen ? "Hide Info" : "Show Info"}
-			</button>
+			<a href="#" onClick={() => setIsOpen(!isOpen)} className='open-btn'>
+				{isOpen ? "Hide Highscores" : "Show Highscores"}
+			</a>
 
 			{isOpen && (
 				<div>
@@ -19,4 +19,4 @@ function HighscoreButton() {
 	)
 }
 
-export default HighscoreButton
+export default HighscoreLink

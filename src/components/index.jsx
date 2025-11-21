@@ -7,7 +7,7 @@ import AnswerArea from "./answerArea"
 import GameControl from "./gameControl"
 import AnswerButtons from "./answerButtons"
 import Results from "./results"
-import Highscore from "./highscoreButton"
+import Highscore from "./highscoreLink"
 
 export {
 	Header,
