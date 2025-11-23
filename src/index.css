@@ -51,16 +51,19 @@ body {
 }
 main {
   grid-area: main;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 4fr 3fr 2fr;
+  grid-template-areas:
+    "flag-area"
+    "answer-area"
+    "action-button";
   margin: auto;
   width: 100%;
   color: var(--text);
   font-size: 18px;
-  min-height: 720px;
+  height: max-content;
   gap: 20px;
+  place-content: center;
 }
 
 @media (min-width: 720px) {
@@ -113,32 +116,24 @@ footer {
   border-top: var(--layout-border);
 }
 
-/* main > * {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-.action-button {
-  height: 120px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  align-items: center;
-}
-
 .flag-area {
+  grid-area: flag-area;
   height: 220px;
   max-width: 320px;
-  margin: 0 auto;
 }
 
 .answer-area {
+  grid-area: answer-area;
   max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
 }
-
+.action-button {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+ align-items: center;
+}
 .info-area {
   grid-area: info-area;
   height: 90px;
@@ -150,7 +145,7 @@ button {
   background-color: var(--primary-dark);
   gap: 10px;
   padding: 5px;
-  align-self: center;
+
   border-radius: 4%;
   color: var(--text);
 }
@@ -202,7 +197,7 @@ fieldset {
 
 fieldset div {
   display: flex;
-  align-items: center;
+  
   cursor: pointer;
 }
 
