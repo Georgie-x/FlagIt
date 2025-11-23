@@ -52,7 +52,7 @@ body {
 main {
   grid-area: main;
   display: grid;
-  grid-template-rows: 3fr 2fr 2fr;
+  grid-template-rows: 3fr 2fr 1.5fr;
   grid-template-areas:
     "flag-area"
     "answer-area"
@@ -182,6 +182,7 @@ img {
 
 a {
   color: var(--highlight);
+  font-size: 16px;
 }
 
 .action-button-area {
