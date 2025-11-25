@@ -52,7 +52,7 @@ body {
 main {
   grid-area: main;
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 140fr 100fr 60fr;
   grid-template-areas:
     "flag-area"
     "answer-area"
