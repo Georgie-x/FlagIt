@@ -52,7 +52,7 @@ body {
 main {
   grid-area: main;
   display: grid;
-  grid-template-rows: 3fr 2fr 1.5fr;
+  grid-template-rows: 3fr 2fr 1.7fr;
   grid-template-areas:
     "flag-area"
     "answer-area"
@@ -63,7 +63,7 @@ main {
   color: var(--text);
   font-size: 18px;
   height: 100%;
-  gap: 10px;
+  gap: 5px;
   justify-items: center;
   min-width: 320px;
 }
