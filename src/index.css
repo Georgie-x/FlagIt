@@ -266,3 +266,15 @@ button.wrong {
 button.aButton {
   font-size: 20px;
 }
+
+@media (hover: none) and (pointer: coarse) {
+  button:focus,
+  button:active {
+    outline: none;
+    border: none;
+  }
+
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
