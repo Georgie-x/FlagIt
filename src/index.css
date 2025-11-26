@@ -273,8 +273,10 @@ button.aButton {
 }
 
 @media (hover: none) and (pointer: coarse) {
+  button:hover,
   button:focus,
-  button:active {
+  button:active,
+  button:focus-visible {
     border: none !important;
     outline: none !important;
   }
