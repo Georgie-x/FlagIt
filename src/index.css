@@ -39,7 +39,8 @@ body {
 
 .layout-container {
   height: 100vh;
-  max-height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
   width: 100%;
   margin: auto;
   display: grid;
@@ -52,7 +53,7 @@ body {
 main {
   grid-area: main;
   display: grid;
-  grid-template-rows: 140fr 100fr 60fr;
+  grid-template-rows: 132fr 100fr 60fr;
   grid-template-areas:
     "flag-area"
     "answer-area"
@@ -250,7 +251,7 @@ button.wrong {
 }
 
 .highscore-display {
-  height: 500px;
+  height: 470px;
   width: 320px;
   background-color: var(--primary-dark);
   position: fixed;
@@ -259,10 +260,9 @@ button.wrong {
   transform: translate(-50%, -50%);
   z-index: 2000;
   padding: 10px;
+  border: var(--layout-border);
 }
 
 button.aButton {
   font-size: 20px;
 }
-
-
