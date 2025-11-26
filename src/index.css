@@ -157,6 +157,11 @@ button:hover {
   border: var(--button-border);
 }
 
+button:focus,
+button:active {
+  outline: none;
+}
+
 img {
   max-height: 220px;
   max-width: 320px;
@@ -268,11 +273,10 @@ button.aButton {
 }
 
 @media (hover: none) and (pointer: coarse) {
-  button:hover,
   button:focus,
   button:active {
-    border: none;
-    outline: none;
+    border: none !important;
+    outline: none !important;
   }
 
   button {
